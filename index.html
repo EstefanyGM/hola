@@ -1,0 +1,46 @@
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
+List<String> Imagenes = [
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-z-bDBTf0JauSbg4Ar9edCzgL_cPFry_HhQ&usqp=CAU2",
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaokfWl-1FlEyO9ZKg4qfxtpwfANA5H96gQZ5xflsr2JpuOsh3NsnxHeqZiqurHFu8A3Y&usqp=CAU",
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuo0ktNhMn1W-CygEn_rtchoOs57kIc6y4muqxuqoLDmL58HiZ5-Ecv1J8ofyHp1valjg&usqp=CAU",
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSv0iygxzwjhe2XTWXRZaEeAVzEaQAwQscFZzx4cX1_G-wIG1QX14zn1Tm8R3Id8LmVTFo&usqp=CAU",
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQp5mt1ymgSA5rZL_fSOz-bkBAborLVV9Ktc0Q-fhoVeamTGlvrdlViEacpk-y_eTmv0Ow&usqp=CAU",
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVpcKXGPS5yNZZh7HsD6D9mylhzaZRFMrY9imo14vbt4CGtvvHdrjBZbIEGIKgl2VqGQc&usqp=CAU",
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKw0fQSnBjTzmYn6Udhi8ckqlyhiK453nJU2Od83aF_Xnrp4OXZoXwJeVA_rB2ubINevA&usqp=CAU",
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVpIvh9nmOvWIZROA7Yx8lF927dJtd5UlPNKFD3CDaitY_rHzdvenFzSclg91BGmorT94&usqp=CAU",
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2ysu3ozC8nHDHS5tjZyWDnYt27sExmTpjmr-0DsIJkI4sCLHCS8asoSjQ1MCx4Ga7Gv0&usqp=CAU",
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG0XSjIzsdd6Ime8SpUatELrrMqfOtk8OnaJlZye5EKPXFmVj27wQk04__8No7vA46oLg&usqp=CAU",
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlVA8bbzEBnc1jhW8DsJcQgS1CaehYarprfw&usqp=CAU",
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGqa2UXnJHZnw_w6gcVdkMyeKW0vbX_WOhzQ&usqp=CAU",
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0mkcptuZnwbwvJE0Xz_dSw-QzMRybWUFJ1g&usqp=CAU",
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAb3W6Gm9YDHxfOoTmspqljfk8A9P5SZtPmRwSmnOMsBihFaQwtsZmH-tkOMeSWhU1z5I&usqp=CAU",
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxcBeGiWr3BabJYZ984lymgtp2-je7UDcRqTaLtIqsqbcUBSZhQzu_rUe3euRZq4SAE3I&usqp=CAU"
+];
+int posicion = 0;
+
+class ImagenController2 extends GetxController {
+  var image = Imagenes[posicion];
+
+  void cambioImagen() {
+    if (posicion == image.length - 1) {
+      posicion = 0;
+    } else {
+      posicion++;
+    }
+    image = Imagenes[posicion];
+    update();
+  }
+
+  void cambioImagen2() {
+    if (posicion <= 0) {
+      posicion = image.length - 1;
+    } else {
+      posicion--;
+    }
+    image = Imagenes[posicion];
+
+    update();
+  }
+}
